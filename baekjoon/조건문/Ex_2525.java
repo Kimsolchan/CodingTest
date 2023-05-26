@@ -10,23 +10,17 @@ public class Ex_2525 {
 		// 3. 결과 : 완성되는 시간,분 출력 
 		
 		Scanner sc = new Scanner(System.in);
-		int time, minute1, minute2, minute3;
-		time = sc.nextInt(); // 현재시간(time)
-		minute1 = sc.nextInt(); // 현재분(minute1)
-		minute2 = sc.nextInt(); // 가공분(minute2)
-		minute3 = minute1 + minute2; // 현재분 + 가공분 
+		// 시간단위를 모두 분으로 통일하고 전부 더한다.
+		// 모두 더한 분(m3)을 시간,분으로 나누어준다.
+		// m3 / 60 -> t
+		// t == 24 -> 0
+		// m3 % 60 -> m
+		int t, m1, m2, m3;
+		t = sc.nextInt();
+		m1 = sc.nextInt();
+		m2 = sc.nextInt();
+		m3 = (t * 60) + m1 + m2;
 		
-		if(minute3 >= 60 && minute3 < 120) {
-			time += 1;
-			minute3 = minute3 - 60;
-			if(time == 24) {
-				time = 0;
-			}
-		}else if(minute3 >= 120) {
-			time += 2;
-			minute3 = minute3 - 120;
-		}
-		
-		System.out.printf("%d %s",time, minute3);
+		System.out.println(String.format("%d %d", (m3 / 60) % 24, m3 % 60)); 
 	}
 }

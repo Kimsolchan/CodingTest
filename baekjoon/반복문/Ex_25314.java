@@ -1,24 +1,20 @@
 package codingtest.baekjoon.반복문;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
-import java.io.IOException;
+import java.util.Scanner;
 
 public class Ex_25314 {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
+		// long int -> 4byte
+		// long long int -> 8byte
+		Scanner sc = new Scanner(System.in);
 		
-		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		String s = bf.readLine();
-		int t = Integer.parseInt(bf.readLine());
+		int longNumber = sc.nextInt();
+		String str = "";
 		
-		StringTokenizer st = new StringTokenizer(bf.readLine());
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
-		
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
+		// 풀이과정 참고하여 해결
+		for(int i = 1; i<=longNumber/4; i++) {
+			str += "long ";
+		}
+		System.out.print(str + "int");
 	}
 }

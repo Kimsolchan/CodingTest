@@ -9,10 +9,13 @@ public class Ex_10951 {
 		
 		int a,b;
 		
-		while(true) {
+		while(sc.hasNextInt()) {
 			a = sc.nextInt();
 			b = sc.nextInt();
 			System.out.println(a + b);
 		}
+		
+		// sc.hasNextInt()
+		// https://cordingdiary.tistory.com/45
 	}
 }
