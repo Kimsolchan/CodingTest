@@ -10,6 +10,8 @@ public class Ex_12919 {
 			if(seoul[i].equals("Kim")) {
 				// anwer = 김서방은 i(인덱스번호)에 있다
 				answer = "김서방은 " + i + "에 있다";
+				// 3. kim을 찾았다면 for문 종료 : 불필요한 탐색 제거
+				break;
 			}
 		}
 		return answer;
