@@ -14,6 +14,6 @@ public interface Ex_181889 {
     int[] num_list = {2, 1, 6};
     int n = 3;
 
-    System.out.println(solution(num_list, 0));
+    System.out.println(solution(num_list, n));
   }
 }
