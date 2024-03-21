@@ -5,7 +5,7 @@ public class Ex_181849 {
     int sum = 0;
 
     for (int i = 0; i < num_str.length(); i++) {
-      sum += Integer.parseInt(Character.toString(num_str.charAt(i)));
+      sum += num_str.charAt(i) - 48;
     }
     return sum;
   }
